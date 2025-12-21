@@ -10,28 +10,18 @@
       "name": "Assign Initiated Issues to Reporter",
       "state": "ENABLED",
       "description": "Fill in a description here.",
-      "authorAccountId": "5a0255bf7569444230690e74",
-      "actorAccountId": "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077",
       "created": 1766352421.829,
       "updated": 1766352696.854,
-      "labels": [],
-      "ruleScopeARIs": [
-        "ari:cloud:jira:f1541b13-04e5-465c-9d6e-9fff40bfbb3d:project/10033"
-      ]
+      "labels": []
     },
     {
       "uuid": "019b429e-ef35-7ef0-8f48-56d6ff0073aa",
       "name": "Thank People For Changing Statuses",
       "state": "ENABLED",
       "description": "",
-      "authorAccountId": "5a0255bf7569444230690e74",
-      "actorAccountId": "557058:f58131cb-b67d-43c7-b30d-6b58d40bd077",
       "created": 1766349270.837,
       "updated": 1766349270.837,
-      "labels": [],
-      "ruleScopeARIs": [
-        "ari:cloud:jira:f1541b13-04e5-465c-9d6e-9fff40bfbb3d:project/10033"
-      ]
+      "labels": []
     }
   ]
 }

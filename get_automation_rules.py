@@ -39,10 +39,17 @@ response = requests.get(
     auth=HTTPBasicAuth(JIRA_EMAIL, JIRA_API_TOKEN)
 )
 
+# Remove Identifiable key
+data=response.json()
+keys_to_remove = ["authorAccountId", "actorAccountId", "ruleScopeARIs"]
+for item in data['data']:
+    for key in keys_to_remove:
+        item.pop(key,None)
+
 # Save response to JSON file
 output_file = f"{PROJECT_KEY}_automation_rules.json"
 with open(output_file, 'w', encoding='utf-8') as f:
-    json.dump(response.json(), f, indent=2)
+    json.dump(data, f, indent=2)
 
 print(f"✅ Saved to {output_file}")
 print(f"Status: {response.status_code}")
