@@ -6,18 +6,18 @@ from dotenv import load_dotenv
 load_dotenv()
 EMAIL = os.getenv('JIRA_EMAIL')
 API_TOKEN = os.getenv('JIRA_API_TOKEN')
-DOMAIN = "loxodonta.atlassian.net" # Change this to your domain
+DOMAIN = os.getenv('DOMAIN')
 
 def delete_jira_issue():
     # Prompt user for the issue code (e.g., DG-4)
-    issue_key = input("Enter the issue key to delete (e.g., DG-4): ").strip()
+    issue_key = input("Enter the issue key to delete (e.g., KAN-1): ").strip()
 
     if not issue_key:
         print("Error: No issue key provided.")
         return
 
     # Construct the Jira REST API v3 URL for the specific issue
-    url = f"https://{DOMAIN}/rest/api/3/issue/{issue_key}"
+    url = f"https://{DOMAIN}.atlassian.net/rest/api/3/issue/{issue_key}"
 
     headers = {
         "Accept": "application/json"

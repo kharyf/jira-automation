@@ -39,7 +39,7 @@ response = requests.get(
     auth=HTTPBasicAuth(JIRA_EMAIL, JIRA_API_TOKEN)
 )
 
-# Remove Identifiable key
+# Remove PII from output files
 data=response.json()
 keys_to_remove = ["authorAccountId", "actorAccountId", "ruleScopeARIs"]
 for item in data['data']:
