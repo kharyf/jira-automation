@@ -6,7 +6,7 @@ This project demonstrates common Jira Automation workflows with Python. It was d
 ## Features
 * Create New Issues from command line
 * Delete Issues from command line
-* Retrieve Space Automation Rules at will
+* Retrieve All Company Automation Rules
 
 ## Getting Started
 1.  Clone this repository.

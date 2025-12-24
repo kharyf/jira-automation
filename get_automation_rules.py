@@ -25,12 +25,6 @@ load_dotenv()
 JIRA_EMAIL = os.getenv('JIRA_EMAIL')
 JIRA_API_TOKEN = os.getenv('JIRA_API_TOKEN')
 CLOUD_ID=os.getenv('CLOUD_ID')
-
-# Get Project Key from user input
-PROJECT_KEY = input("Enter the Jira Project Key (e.g., LOX): ").strip()
-if not PROJECT_KEY:
-    print("❌ Error: Project Key cannot be empty.")
-    exit(1)
 PROTOCOL = 'https'
 HOST = 'api.atlassian.com'
 
@@ -52,7 +46,7 @@ for item in data['data']:
         item.pop(key,None)
 
 # Save response to JSON file
-output_file = f"{PROJECT_KEY}_automation_rules.json"
+output_file = f"all_automation_rules.json"
 with open(output_file, 'w', encoding='utf-8') as f:
     json.dump(data, f, indent=2)
 
