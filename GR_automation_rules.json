@@ -1,0 +1,27 @@
+{
+  "links": {
+    "self": null,
+    "next": null,
+    "prev": null
+  },
+  "data": [
+    {
+      "uuid": "019b42cf-03c5-715a-ae3e-6f48cac4978d",
+      "name": "Assign Initiated Issues to Reporter",
+      "state": "ENABLED",
+      "description": "Fill in a description here.",
+      "created": 1766352421.829,
+      "updated": 1766352696.854,
+      "labels": []
+    },
+    {
+      "uuid": "019b429e-ef35-7ef0-8f48-56d6ff0073aa",
+      "name": "Thank People For Changing Statuses",
+      "state": "ENABLED",
+      "description": "",
+      "created": 1766349270.837,
+      "updated": 1766349270.837,
+      "labels": []
+    }
+  ]
+}

@@ -25,7 +25,12 @@ load_dotenv()
 JIRA_EMAIL = os.getenv('JIRA_EMAIL')
 JIRA_API_TOKEN = os.getenv('JIRA_API_TOKEN')
 CLOUD_ID=os.getenv('CLOUD_ID')
-PROJECT_KEY = 'LOX'
+
+# Get Project Key from user input
+PROJECT_KEY = input("Enter the Jira Project Key (e.g., LOX): ").strip()
+if not PROJECT_KEY:
+    print("❌ Error: Project Key cannot be empty.")
+    exit(1)
 PROTOCOL = 'https'
 HOST = 'api.atlassian.com'
 
